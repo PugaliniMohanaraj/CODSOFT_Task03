@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+.cal1 {
+  position: relative;
+  background: #333;
+  box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),
+    10px 10px 70px rgba(0, 0, 0, 0.25),
+    inset -10px -10px 25px rgba(0, 0, 0, 0.5),
+    inset 10px 10px 25px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+}
+.cal2 {
+  position: relative;
+  display: grid;
+}
+.cal2 .value {
+  position: relative;
+  grid-column: span 4;
+  height: 70px;
+  left: 2%;
+  width: 96%;
+  border: none;
+  outline: none;
+  background: #a7af7c;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: inset -5px -5px 12px #a7af7c,
+    inset 5px 5px 12px rgba(0, 0, 0, 0.16);
+  text-align: right;
+}
+.value {
+  font-size: 20px;
+}
+.cal2 span {
+  position: relative;
+  display: grid;
+  width: 60px;
+  height: 60px;
+  margin: 8px;
+  background: linear-gradient(180deg #2f2f2f, #3f3f3f);
+  box-shadow: inset -8px 0.8px rgba(0, 0, 0, 0.15),
+    inset 0 -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75),
+    10px 20px 25px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  user-select: none;
+  cursor: pointer;
+
+  border-radius: 10px;
+  place-items: center;
+}
+span {
+  color: #fff;
+}
+.cal2 span::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: linear-gradient(90deg #2f2f2f, #3f3f3f);
+  border-radius: 10px;
+  box-shadow: -5px -5px 15px rgba(0, 0, 0, 0.1),
+    10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+
+.cal2 span:active {
+  filter: brightness(1.5);
+}
+.cal2 span i {
+  position: relative;
+  font-style: normal;
+  font-size: 0.4cm;
+  text-transform: uppercase;
+}
+
+.cal2 .plus {
+  grid-row: span 2;
+  height: 140px;
+}
+.cal2 .equal {
+  background: #2196f3;
+}
+.cal2 .equal::before {
+  background: linear-gradient(90deg #1479c9, #ffffff5c);
+  border-left: 1px solid #fff4;
+  border-bottom: 1px solid #fff4;
+  border-top: 1px solid #fff4;
+}
+.cal2 .clear {
+  background: #f00;
+}

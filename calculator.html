@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CALCULATOR</title>
+    <link rel="stylesheet" href="calculator.css" />
+  </head>
+  <body>
+    <div class="cal1">
+      <form class="cal2" name="calc">
+        <input
+          type="text"
+          class="value"
+          placeholder="0"
+          readonly
+          name="txt"
+          id="output"
+        />
+        <span class="num clear" onclick="calc.txt.value=''"><i>C</i></span>
+        <span class="num" onclick="del()"><i>DEL</i></span>
+        <span class="num" onclick="display('/')"><i>/</i></span>
+        <span class="num" onclick="display('*')"><i>*</i></span>
+        <span class="num" onclick="display('7')"><i>7</i></span>
+        <span class="num" onclick="display('8')"><i>8</i></span>
+        <span class="num" onclick="display('9')"><i>9</i></span>
+        <span class="num" onclick="display('-')"><i>-</i></span>
+        <span class="num" onclick="display('4')"><i>4</i></span>
+        <span class="num" onclick="display('5')"><i>5</i></span>
+        <span class="num" onclick="display('6')"><i>6</i></span>
+        <span class="num plus" onclick="display('+')"><i>+</i></span>
+        <span class="num" onclick="display('1')"><i>1</i></span>
+        <span class="num" onclick="display('2')"><i>2</i></span>
+        <span class="num" onclick="display('3')"><i>3</i></span>
+        <span class="num" onclick="display('0')"><i>0</i></span>
+        <span class="num" onclick="display('00')"><i>00</i></span>
+        <span class="num" onclick="display('.')"><i>.</i></span>
+        <span onclick="calculate('=')" class="num equal"><i>=</i></span>
+      </form>
+    </div>
+    <script src="calculator.js"></script>
+  </body>
+</html>
